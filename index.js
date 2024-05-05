@@ -29,3 +29,5 @@ connectionDB().then(()=>{
     });
 })
 
+module.exports = app;
+
