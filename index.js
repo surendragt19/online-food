@@ -9,7 +9,7 @@ const cors=require('cors')
 
 app.use(cors())
 
-
+const Port = process.env.PORT || 3000;
 
 app.use(express.json())
 app.use(registerLoginRouter)
@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 
 
 connectionDB().then(()=>{
-    app.listen(process.env.PORT, () => {
+    app.listen(Port, () => {
         console.log(`The Server Is Run on Port : ${Port}`)
     });
 })
