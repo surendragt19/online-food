@@ -22,10 +22,12 @@ app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
 });
 
-const Port = 8000;
+
 connectionDB().then(()=>{
-    app.listen(Port, () => {
+    app.listen(process.env.PORT, () => {
         console.log(`The Server Is Run on Port : ${Port}`)
     });
 })
+
+module.exports = app;
 
