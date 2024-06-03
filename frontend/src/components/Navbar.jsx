@@ -45,7 +45,7 @@ const Navbar = () => {
         <>
         <div className='btn bg-warning text-dark mx-1' onClick={()=>setCartView(true)}><i className="fa fa-shopping-cart" aria-hidden="true"></i>
  {"   "}
-        <span className="badge bg-warning text-dark">{data.length}</span></div>
+        <span className="badge bg-warning text-dark"><sup>{data.length}</sup></span></div>
 
 
         {carView ? <Modal onClose={()=>setCartView(false)}><Cart/></Modal>:null}
